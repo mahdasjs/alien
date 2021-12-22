@@ -4,5 +4,8 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/food.unity
+    guid: 12e9af04b0b95de44ae3e633ff5e47a1
   m_configObjects: {}
