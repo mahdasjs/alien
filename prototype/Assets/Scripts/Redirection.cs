@@ -4,14 +4,14 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-public class redirectToGame : MonoBehaviour
+public class Redirection : MonoBehaviour
 {
 
     // Start is called before the first frame update
 
-    public void onclick()
+    public void foodClick()
     {
-        SceneManager.LoadScene("menu");
+        SceneManager.LoadScene("food");
 
     }
 }
