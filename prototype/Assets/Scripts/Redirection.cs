@@ -14,4 +14,9 @@ public class Redirection : MonoBehaviour
         SceneManager.LoadScene("food");
 
     }
+    public void changeChar()
+    {
+        SceneManager.LoadScene("menu");
+
+    }
 }
