@@ -54,10 +54,10 @@ public class gameController : MonoBehaviour
     public void MoveCamera()
     {
         moveCount++;
-        if (moveCount == 3)
+        if (moveCount == 2)
         {
             moveCount = 0;
-            //cameraScript.targetPos.y += 2f;
+            cameraScript.targetPos.y += 3f;
         }
     }
 

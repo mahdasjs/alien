@@ -98,7 +98,7 @@ public class box : MonoBehaviour
         if (ignoreTrigger)
             return;
 
-        if (target.gameObject.tag == "destroy")
+        if (target.tag == "destroy")
         {
             CancelInvoke("Landed");
             gameOver = true;
