@@ -1,11 +1,21 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+
 
 public class boxSpawner : MonoBehaviour
 {
     public GameObject box_prefab;
 
+    public static Text scoreText;
+    public static int score = 0;
+
+    void Awake()
+    {
+        scoreText = GameObject.Find("score").GetComponent<Text>();
+        scoreText.text = "0";
+    }
 
     public void SpawnBox()
     {

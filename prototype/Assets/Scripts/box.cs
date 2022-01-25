@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class box : MonoBehaviour
 {
@@ -11,12 +12,17 @@ public class box : MonoBehaviour
     private bool gameOver;
     private bool ignoreCollision;
     private bool ignoreTrigger;
+    private Text scoreText;
+
     public GameObject restartMenuUI;
+
+
 
     void Awake()
     {
         myBody = GetComponent<Rigidbody2D>();
         myBody.gravityScale = 0f;
+
     }
 
     // Start is called before the first frame update
@@ -67,14 +73,17 @@ public class box : MonoBehaviour
         ignoreCollision = true;
         ignoreTrigger = true;
 
+        boxSpawner.score++;
+        boxSpawner.scoreText.text = boxSpawner.score.ToString();
+
         gameController.instance.SpawnNewBox();
         gameController.instance.MoveCamera();
     }
 
     void RestartGame()
     {
-        restartMenuUI.SetActive(true);
-        Time.timeScale = 0f;
+        UnityEngine.SceneManagement.SceneManager.LoadScene("SampleScene");
+
     }
 
     void OnCollisionEnter2D(Collision2D target)
