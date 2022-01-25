@@ -93,13 +93,14 @@ public class box : MonoBehaviour
         }
     }
 
-    void OnTriggerEnter2d(Collider2D target)
+    void OnTriggerEnter2D(Collider2D target)
     {
         if (ignoreTrigger)
             return;
 
         if (target.tag == "destroy")
         {
+            Debug.Log("hi");
             CancelInvoke("Landed");
             gameOver = true;
             ignoreTrigger = true;

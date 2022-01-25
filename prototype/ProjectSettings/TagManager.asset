@@ -7,6 +7,9 @@ TagManager:
   - kill
   - Kill
   - Food
+  - box
+  - destroy
+  - platform
   layers:
   - Default
   - TransparentFX
