@@ -758,7 +758,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90e263bcb5bf0a245bd31a698a3677eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  box_prefab: {fileID: 2905374329327024754, guid: 6921f5681529f5246997f7e0723d2196,
+  box_prefab: {fileID: 1373831354938299588, guid: 6921f5681529f5246997f7e0723d2196,
     type: 3}
 --- !u!1 &1018587552
 GameObject:
@@ -1331,6 +1331,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pauseMenuUI: {fileID: 2059214290}
+  restartMenuUI: {fileID: 0}
 --- !u!114 &1910840665
 MonoBehaviour:
   m_ObjectHideFlags: 0

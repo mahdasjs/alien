@@ -7,6 +7,7 @@ public class playerScore : MonoBehaviour
 {
     private Text scoreText;
     private int score = 0;
+    public GameObject restartMenuUI;
 
     void Awake()
     {
@@ -25,6 +26,8 @@ public class playerScore : MonoBehaviour
         if (target.tag == "rocket")
         {
             target.gameObject.SetActive(false);
+            restartMenuUI.SetActive(true);
+            Time.timeScale = 0f;
         }
     }
 }

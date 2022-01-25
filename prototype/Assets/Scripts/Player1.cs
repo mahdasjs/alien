@@ -7,6 +7,8 @@ public class Player1 : MonoBehaviour
     private Camera cam;
     private Vector3 camLowBound;
     public static int score = 0;
+    public GameObject restartMenuUI;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -26,7 +28,8 @@ public class Player1 : MonoBehaviour
         camLowBound = cam.ViewportToWorldPoint(new Vector3(0f, 0f, cam.nearClipPlane));
         if (transform.position.y < camLowBound.y)
         {
-            GameManager.GameOver();
+            restartMenuUI.SetActive(true);
+            Time.timeScale = 0f;
         }
     }
 }

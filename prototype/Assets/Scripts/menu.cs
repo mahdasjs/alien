@@ -6,6 +6,7 @@ public class menu : MonoBehaviour
 {
     public static bool gameIsPaused = false;
     public GameObject pauseMenuUI;
+    public GameObject restartMenuUI;
     // Update is called once per frame
     void Update()
     {
@@ -23,6 +24,11 @@ public class menu : MonoBehaviour
         }
     }
 
+    public void Restart()
+    {
+        UnityEngine.SceneManagement.SceneManager.LoadScene(
+            UnityEngine.SceneManagement.SceneManager.GetActiveScene().name);
+    }
     public void Resume()
     {
         pauseMenuUI.SetActive(false);

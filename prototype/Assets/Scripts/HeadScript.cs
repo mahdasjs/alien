@@ -5,29 +5,15 @@ using UnityEngine.SceneManagement;
 
 public class HeadScript : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    public GameObject restartMenuUI;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.tag == "Ground")
         {
-            StartCoroutine(LoadStartScene());
+            restartMenuUI.SetActive(true);
+            Time.timeScale = 0f;
         }
     }
 
-    IEnumerator LoadStartScene()
-    {
-        yield return new WaitForSeconds(3);
-        SceneManager.LoadScene("SampleScene");
-    }
 }

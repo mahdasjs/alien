@@ -11,6 +11,7 @@ public class box : MonoBehaviour
     private bool gameOver;
     private bool ignoreCollision;
     private bool ignoreTrigger;
+    public GameObject restartMenuUI;
 
     void Awake()
     {
@@ -72,7 +73,8 @@ public class box : MonoBehaviour
 
     void RestartGame()
     {
-        gameController.instance.RestartGame();
+        restartMenuUI.SetActive(true);
+        Time.timeScale = 0f;
     }
 
     void OnCollisionEnter2D(Collision2D target)
@@ -100,7 +102,6 @@ public class box : MonoBehaviour
 
         if (target.tag == "destroy")
         {
-            Debug.Log("hi");
             CancelInvoke("Landed");
             gameOver = true;
             ignoreTrigger = true;
