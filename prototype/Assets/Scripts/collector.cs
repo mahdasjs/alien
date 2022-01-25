@@ -22,7 +22,8 @@ public class collector : MonoBehaviour
         }
         if (target.tag == "coin" || target.tag == "rocket")
         {
-            target.gameObject.SetActive(false);
+
+            Destroy(target.gameObject);
         }
     }
     // Start is called before the first frame update
