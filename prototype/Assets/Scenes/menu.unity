@@ -617,6 +617,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 9a636333f50bf2046ae12c08171b3c02, type: 3}
   - {fileID: 21300000, guid: 1a48d2629408c53429e60a7f8df41a85, type: 3}
   - {fileID: 21300000, guid: fd193a8fc8f7c0044b9a5d3382c91202, type: 3}
+  - {fileID: 21300000, guid: 89a7a66b7586339499b5c7ab23cb9042, type: 3}
   playerskin: {fileID: 2097854184}
 --- !u!4 &917761103
 Transform:
