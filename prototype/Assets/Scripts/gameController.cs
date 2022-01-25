@@ -29,6 +29,14 @@ public class gameController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        DetectInput();
+    }
+
+    void DetectInput()
+    {
+        if (Input.GetMouseButtonDown(0))
+        {
+            currentBox.DropBox();
+        }
     }
 }

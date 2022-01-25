@@ -27,7 +27,6 @@ public class box : MonoBehaviour
             move_speed *= -1f;
         }
         gameController.instance.currentBox = this;
-
     }
 
     // Update is called once per frame
@@ -53,5 +52,10 @@ public class box : MonoBehaviour
             }
             transform.position = temp;
         }
+    }
+    public void DropBox()
+    {
+        canMove = false;
+        myBody.gravityScale = Random.Range(2, 4);
     }
 }

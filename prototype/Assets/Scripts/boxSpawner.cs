@@ -14,9 +14,4 @@ public class boxSpawner : MonoBehaviour
         temp.z = 0f;
         box_Obj.transform.position = temp;
     }
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }
