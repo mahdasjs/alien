@@ -2,11 +2,22 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class player : MonoBehaviour
 {
     [Range(0f, 0.5f)] public float moveAmount;
     public Vector3 currentPosition;
+
+    private Text scoreText;
+    private int score = 0;
+    public GameObject restartMenuUI;
+
+    void Awake()
+    {
+        scoreText = GameObject.Find("score").GetComponent<Text>();
+        scoreText.text = "0";
+    }
 
     private void Start()
     {
@@ -37,9 +48,8 @@ public class player : MonoBehaviour
 
         if (collision.gameObject.CompareTag("Food"))
         {
-            Debug.Log("HEARTS: ");
-
-            // destroy the food object
+            score++;
+            scoreText.text = score.ToString();
             Destroy(collision.gameObject);
         }
     }

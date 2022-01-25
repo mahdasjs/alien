@@ -7,6 +7,14 @@ TagManager:
   - kill
   - Kill
   - Food
+  - box
+  - destroy
+  - platform
+  - collector
+  - bg
+  - ground
+  - coin
+  - rocket
   layers:
   - Default
   - TransparentFX
@@ -16,11 +24,11 @@ TagManager:
   - UI
   - 
   - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - BG
+  - Ground
+  - Collector
+  - Items
+  - Player
   - 
   - 
   - 
@@ -43,4 +51,19 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: background
+    uniqueID: 2034423309
+    locked: 0
+  - name: ground
+    uniqueID: 4165277653
+    locked: 0
+  - name: items
+    uniqueID: 2421004169
+    locked: 0
+  - name: player
+    uniqueID: 242635353
+    locked: 0
+  - name: canves
+    uniqueID: 3135435673
     locked: 0
