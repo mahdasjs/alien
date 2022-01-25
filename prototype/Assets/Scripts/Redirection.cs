@@ -14,6 +14,21 @@ public class Redirection : MonoBehaviour
         SceneManager.LoadScene("food");
 
     }
+    public void hillClick()
+    {
+        SceneManager.LoadScene("hill");
+
+    }
+    public void towerClick()
+    {
+        SceneManager.LoadScene("tower");
+
+    }
+    public void runnerClick()
+    {
+        SceneManager.LoadScene("runner");
+
+    }
     public void changeChar()
     {
         SceneManager.LoadScene("menu");
