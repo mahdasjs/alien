@@ -12,6 +12,7 @@ public class gameController : MonoBehaviour
     public box currentBox;
 
     public cameraFollow cameraScript;
+    private int moveCount;
     void Awake()
     {
         if (instance == null)
@@ -39,4 +40,31 @@ public class gameController : MonoBehaviour
             currentBox.DropBox();
         }
     }
+
+    public void SpawnNewBox()
+    {
+        Invoke("NewBox", 2f);
+    }
+
+    void NewBox()
+    {
+        box_spawner.SpawnBox();
+    }
+
+    public void MoveCamera()
+    {
+        moveCount++;
+        if (moveCount == 3)
+        {
+            moveCount = 0;
+            //cameraScript.targetPos.y += 2f;
+        }
+    }
+
+    public void RestartGame()
+    {
+        UnityEngine.SceneManagement.SceneManager.LoadScene(
+            UnityEngine.SceneManagement.SceneManager.GetActiveScene().name);
+    }
 }
+

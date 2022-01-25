@@ -58,4 +58,53 @@ public class box : MonoBehaviour
         canMove = false;
         myBody.gravityScale = Random.Range(2, 4);
     }
+
+    void Landed()
+    {
+        if (gameOver)
+            return;
+        ignoreCollision = true;
+        ignoreTrigger = true;
+
+        gameController.instance.SpawnNewBox();
+        gameController.instance.MoveCamera();
+    }
+
+    void RestartGame()
+    {
+        gameController.instance.RestartGame();
+    }
+
+    void OnCollisionEnter2D(Collision2D target)
+    {
+        if (ignoreCollision)
+            return;
+        if (target.gameObject.tag == "platform")
+        {
+            Invoke("Landed", 2f);
+            ignoreCollision = true;
+
+        }
+        if (target.gameObject.tag == "box")
+        {
+            Invoke("Landed", 2f);
+            ignoreCollision = true;
+
+        }
+    }
+
+    void OnTriggerEnter2d(Collider2D target)
+    {
+        if (ignoreTrigger)
+            return;
+
+        if (target.gameObject.tag == "destroy")
+        {
+            CancelInvoke("Landed");
+            gameOver = true;
+            ignoreTrigger = true;
+
+            Invoke("RestartGame",2f);
+        }
+    }
 }
