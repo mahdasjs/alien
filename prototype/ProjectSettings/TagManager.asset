@@ -13,6 +13,8 @@ TagManager:
   - collector
   - bg
   - ground
+  - coin
+  - rocket
   layers:
   - Default
   - TransparentFX

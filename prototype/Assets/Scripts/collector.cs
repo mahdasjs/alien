@@ -16,12 +16,14 @@ public class collector : MonoBehaviour
     {
         if(target.tag=="bg"|| target.tag == "ground")
         {
-            Debug.Log(width);
             Vector3 temp = target.transform.position;
             temp.x += width * 4;
             target.transform.position = temp;
         }
-
+        if (target.tag == "coin" || target.tag == "rocket")
+        {
+            target.gameObject.SetActive(false);
+        }
     }
     // Start is called before the first frame update
     void Start()
