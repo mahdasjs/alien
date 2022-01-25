@@ -7,7 +7,6 @@ using UnityEngine.SceneManagement;
 public class Redirection : MonoBehaviour
 {
 
-    // Start is called before the first frame update
 
     public void foodClick()
     {
@@ -16,7 +15,7 @@ public class Redirection : MonoBehaviour
     }
     public void hillClick()
     {
-        SceneManager.LoadScene("hill");
+        SceneManager.LoadScene("Sample");
 
     }
     public void towerClick()
@@ -27,6 +26,10 @@ public class Redirection : MonoBehaviour
     public void runnerClick()
     {
         SceneManager.LoadScene("runner");
+    }
+    public void doodleClick()
+    {
+        SceneManager.LoadScene("MainScene");
 
     }
     public void changeChar()
